@@ -1,12 +1,17 @@
 # Cl-Rainbow
 
+Common Lisp port of rubygem's rainbow
+
+see. https://github.com/sickill/rainbow
+
 ## Usage
 
-## Installation
+```
+(setf cl-rainbow:*enabled* t)
+(print (color :red "red string"))
+(print (color #x5599ff "rgb color code"))
 
-## Author
-
-* Takayuki Sato (takayuki.sato.dev@gmail.com)
+```
 
 ## Copyright
 

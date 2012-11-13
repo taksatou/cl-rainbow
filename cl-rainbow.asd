@@ -16,7 +16,7 @@
   :version "0.1"
   :author "Takayuki Sato"
   :license "LLGPL"
-  :depends-on (:cl-annot)
+  :depends-on ()
   :components ((:module "src"
                 :components
                 ((:file "cl-rainbow"))))

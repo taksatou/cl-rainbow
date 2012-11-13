@@ -10,8 +10,13 @@
         :cl-test-more))
 (in-package :cl-rainbow-test)
 
-(plan nil)
+(plan 5)
 
-;; blah blah blah.
+(setf *enabled* t)
+(is (color 'red "<original string>") "[31m<original string>[0m")
+(is (color :red "<original string>") "[31m<original string>[0m")
+(is (colour :red "<original string>") "[31m<original string>[0m")
+(is (foreground :red "<original string>") "[31m<original string>[0m")
+(is (color #x123456 "<original string>") "[38;5;24m<original string>[0m")
 
 (finalize)

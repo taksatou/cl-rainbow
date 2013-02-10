@@ -8,10 +8,19 @@ see. https://github.com/sickill/rainbow
 
 ```
 (setf cl-rainbow:*enabled* t)
-(print (color :red "red string"))
-(print (color #x5599ff "rgb color code"))
+(print (cl-rainbow:color :red "red string"))
+(print (cl-rainbow:color #x5599ff "rgb color code"))
 
 ```
+
+Color can be one of following symbols:
+``` :black :red :green :yellow :blue :magenta :cyan :white :default ```
+
+If you have 256-colors capable terminal you can also specify color in RGB which will find the nearest match from 256 colors palette.
+
+## Installation
+
+TODO
 
 ## Copyright
 

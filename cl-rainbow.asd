@@ -20,7 +20,7 @@
   :components ((:module "src"
                 :components
                 ((:file "cl-rainbow"))))
-  :description ""
+  :description "Common Lisp port of rubygem's rainbow."
   :long-description
   #.(with-open-file (stream (merge-pathnames
                              #p"README.markdown"

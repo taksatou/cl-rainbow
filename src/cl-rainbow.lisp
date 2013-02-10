@@ -12,24 +12,22 @@
 (in-package :cl-rainbow)
 
 (defparameter *enabled* nil)
-
-(defconstant +term-colors+ '(:black 0
-                             :red 1
-                             :green 2
-                             :yellow 3
-                             :blue 4
-                             :magenta 5
-                             :cyan 6
-                             :white 7
-                             :default 9))
-
-(defconstant +term-effects+ '(:reset 0
-                              :bright 1
-                              :italic 3
-                              :underline 4
-                              :blink 5
-                              :inverse 7
-                              :hide 8))
+(defparameter +term-colors+ '(:black 0
+                              :red 1
+                              :green 2
+                              :yellow 3
+                              :blue 4
+                              :magenta 5
+                              :cyan 6
+                              :white 7
+                              :default 9))
+(defparameter +term-effects+ '(:reset 0
+                               :bright 1
+                               :italic 3
+                               :underline 4
+                               :blink 5
+                               :inverse 7
+                               :hide 8))
 
 (defun wrap-with-code (code str)
   (if *enabled* (format nil "~c[~am~a~c[0m" (code-char #o33) code str (code-char #o33)) str))
@@ -41,7 +39,7 @@
                    (* 6 (cadr ansi-domain))
                    (caddr ansi-domain))))
     (format nil "~d;5;~d" (if (eql style :foreground) 38 48) index)))
-  
+
 (defmethod ansi-color-code (style (color symbol))
   (let ((col (getf +term-colors+ (intern (symbol-name color) 'keyword)))
         (ground (if (eql style :foreground) 30 40)))

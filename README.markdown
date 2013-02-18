@@ -10,7 +10,7 @@ see. https://github.com/sickill/rainbow
 (setf cl-rainbow:*enabled* t)
 (print (cl-rainbow:color :red "red string"))
 (print (cl-rainbow:color #x5599ff "rgb color code"))
-
+(loop for c across "rainbow" do (format t "~A" (cl-rainbow:color (random #xffffff) c)))
 ```
 
 Color can be one of following symbols:

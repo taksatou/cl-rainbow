@@ -5,6 +5,7 @@
 
 (in-package :cl-user)
 (defpackage cl-rainbow
+  (:nicknames #:rainbow)
   (:use :cl)
   (:export *enabled* color colour background foreground
            reset bright italic underline blink inverse hide))

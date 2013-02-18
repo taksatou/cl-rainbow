@@ -22,6 +22,14 @@ If you have 256-colors capable terminal you can also specify color in RGB which 
 
 TODO
 
+## lisp
+
+* allegro cl
+* clozure cl
+* sbcl
+* clisp
+* abcl
+
 ## Copyright
 
 Copyright (c) 2012 Takayuki Sato (takayuki.sato.dev@gmail.com)

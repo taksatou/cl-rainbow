@@ -11,7 +11,7 @@
 
 (in-package :cl-rainbow)
 
-(defparameter *enabled* nil)
+(defparameter *enabled* t)
 (defparameter +term-colors+ '(:black 0
                               :red 1
                               :green 2
